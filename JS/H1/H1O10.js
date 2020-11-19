@@ -4,13 +4,18 @@ function setup() {
   textFont("Verdana");
   textSize(14);
   noStroke();
+  background('lavender');
   //noLoop();
 }
 
+var circles = 0;
+
 function draw() {
-  background('lavender');
+  fill('wheat');
+  rect(0,0,450,30)
   fill('black');
-  text("mouseX:" + round(mouseX) + " mouseY:"+round(mouseY),10,20);
+  text("mouseX:" + round(mouseX) + " mouseY:"+round(mouseY)+" Cricles:"+circles,10,20);
   fill('indianred');
-  ellipse(width/2,height/2,10);
+  ellipse(mouseX,mouseY,10);
+  circles++;
 }

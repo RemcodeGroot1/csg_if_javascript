@@ -14,7 +14,12 @@ function draw() {
   background('orange');
   fill('yellow');
   textAlign(LEFT, TOP);
-  text("mouseX:" + mouseX + "\nmouseY:" + mouseY,mouseX,mouseY);
+  push()
+  textSize(20)
+  textFont("Georgia")
+  textLeading(10)
+  text("mouseX:"+round(mouseX) + " mouseY:"+round(mouseY),mouseX,mouseY);
+  pop()
   translate(50,50);
   fill('black');
   text("vensterGrootte:\n" + windowWidth + " x " + windowHeight,0,0);
