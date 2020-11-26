@@ -1,5 +1,6 @@
-var xJOS = 225;
+var xJOS = 75;
 var yJOS = 75;
+var snelheid = 3;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -14,6 +15,11 @@ function draw() {
   background('lavender');
   text("x = " + round(xJOS),10,20);
   tekenJos(xJOS,yJOS);
+  translate(0,160);
+  tekenJos(xJOS,yJOS);
+  translate(0,160);
+  tekenJos(xJOS,yJOS);
+  xJOS = constrain(xJOS + snelheid,75,425)
 }
 
 function tekenJos(x,y) {
