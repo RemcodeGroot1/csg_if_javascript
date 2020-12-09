@@ -27,8 +27,11 @@ function draw() {
   }
   
   ellipse(width / 2,height / 2,100);
+  afstand=dist(mouseX,mouseY,225,225);
+  if(afstand <= 75){
+      kleur='red';
+  }
   tekenJos(mouseX,mouseY,kleur);
-  afstand=dist(315,105,225,225);
   text(afstand,10,40);
 }
 
